@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "imTranslations",
+    "version": "1.0",
+    "icons": {
+        "16": "images/imtr_16.png",
+        "32": "images/imtr_32.png",
+        "48": "images/imtr_48.png",
+        "64": "images/imtr_64.png",
+        "128": "images/imtr_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content_scripts/tooltip.js"
+            ],
+            "css": [
+                "content_scripts/tooltip.css"
+            ]
+        }
+    ],
+    "permissions": [
+        "http://*/",
+        "https://*/"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "images/imtr_16.png",
+            "32": "images/imtr_32.png",
+            "48": "images/imtr_48.png",
+            "64": "images/imtr_64.png",
+            "128": "images/imtr_128.png"
+        },
+        "default_title": "imTranslations",
+        "default_popup": "popup/popup.html"
+    }
+}
