@@ -1,0 +1,19 @@
+.btn {
+    background-color: #4fc87a;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 0 30px;
+    transition: background-color .2s ease;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.btn:focus, .btn:hover {
+    background-color: #40a363; 
+}

@@ -14,9 +14,9 @@ const apiReq = (url, data) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     })
-    .then((response) => {
-        return response.json()
-    })
+        .then((response) => {
+            return response.json()
+        })
 }
 
 const getTranslation = (word) => {
@@ -24,14 +24,14 @@ const getTranslation = (word) => {
         .then(response => response.json())
         .then(result => {
             let translations = result[5] && result[5][0]
-            if(translations){
+            if (translations) {
                 return {
                     word: translations[0],
                     translations: translations[2].map((tr) => {
                         return tr[0] ? tr[0].toLowerCase() : ''
                     })
                 }
-            }else{
+            } else {
                 return null
             }
         })
@@ -63,7 +63,7 @@ const fetchWord = async (word) => {
             text: variant
         }
     })
-    
+
     return result
 }
 
@@ -83,7 +83,7 @@ class Tooltip {
         this.el.style.display = 'none'
     }
 
-    render(content){
+    render(content) {
         this.content = content
         this.el.innerHTML = `<div class="word">${content.word}</div>
         <div class="translation">
